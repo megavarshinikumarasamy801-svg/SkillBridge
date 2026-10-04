@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Student Skill Exchange</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">SkillBridge</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#skills">Find Skills</a>
+            <a href="#students">Students</a>
+            <a href="#register">Join</a>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Learn. Teach. Exchange.</h1>
+
+            <p>
+                SkillBridge connects students who want to learn
+                with students who can teach.
+            </p>
+
+            <button onclick="scrollToRegister()">
+                Join SkillBridge
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="section">
+
+        <h2>How SkillBridge Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="icon">👤</div>
+                <h3>Create Profile</h3>
+                <p>Add your skills and interests.</p>
+            </div>
+
+            <div class="step">
+                <div class="icon">🔍</div>
+                <h3>Find Skills</h3>
+                <p>Find students who can teach you.</p>
+            </div>
+
+            <div class="step">
+                <div class="icon">🤝</div>
+                <h3>Exchange Skills</h3>
+                <p>Learn from each other.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Find Skills -->
+    <section id="skills" class="section search-section">
+
+        <h2>Find a Skill</h2>
+
+        <p>Search for students who can teach a skill.</p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="skillSearch"
+                placeholder="Example: Java, Python, Photoshop..."
+            >
+
+            <button onclick="searchSkill()">
+                Search
+            </button>
+
+        </div>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+
+    <!-- Students -->
+    <section id="students" class="section">
+
+        <h2>Popular Skill Providers</h2>
+
+        <div class="student-container">
+
+            <div class="student-card">
+                <div class="profile">A</div>
+
+                <h3>Arun</h3>
+                <p>CSE Student</p>
+
+                <div class="skills">
+                    <span>Java</span>
+                    <span>Python</span>
+                </div>
+
+                <button onclick="sendRequest('Arun')">
+                    Connect
+                </button>
+            </div>
+
+
+            <div class="student-card">
+                <div class="profile">P</div>
+
+                <h3>Priya</h3>
+                <p>IT Student</p>
+
+                <div class="skills">
+                    <span>Photoshop</span>
+                    <span>UI/UX</span>
+                </div>
+
+                <button onclick="sendRequest('Priya')">
+                    Connect
+                </button>
+            </div>
+
+
+            <div class="student-card">
+                <div class="profile">R</div>
+
+                <h3>Rahul</h3>
+                <p>AI & DS Student</p>
+
+                <div class="skills">
+                    <span>Python</span>
+                    <span>Data Science</span>
+                </div>
+
+                <button onclick="sendRequest('Rahul')">
+                    Connect
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registration -->
+    <section id="register" class="section register-section">
+
+        <h2>Join SkillBridge</h2>
+
+        <p>Create your student skill profile.</p>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="department"
+                placeholder="Department"
+                required
+            >
+
+            <input
+                type="text"
+                id="teachSkill"
+                placeholder="Skill you can teach"
+                required
+            >
+
+            <input
+                type="text"
+                id="learnSkill"
+                placeholder="Skill you want to learn"
+                required
+            >
+
+            <button type="submit">
+                Create Profile
+            </button>
+
+        </form>
+
+        <div id="profileMessage"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>SkillBridge</h3>
+
+        <p>
+            Connecting students through skills.
+        </p>
+
+        <p>
+            © 2026 SkillBridge
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

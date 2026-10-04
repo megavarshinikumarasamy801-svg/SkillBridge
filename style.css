@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* Navigation */
+
+nav {
+    background: #4f46e5;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button {
+    background: white;
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* Common Sections */
+
+.section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+
+/* Steps */
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Search */
+
+.search-section {
+    background: #eef2ff;
+}
+
+.search-box {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 400px;
+}
+
+
+/* Inputs */
+
+input {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #4f46e5;
+}
+
+
+/* Students */
+
+.student-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.student-card {
+    background: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.profile {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 15px;
+
+    background: #4f46e5;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.student-card p {
+    color: #666;
+    margin: 8px 0 15px;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+
+/* Registration */
+
+.register-section {
+    background: white;
+}
+
+form {
+    max-width: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form button {
+    margin-top: 5px;
+}
+
+#profileMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Search Results */
+
+.result-card {
+    background: white;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+
+/* Footer */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+}
+
